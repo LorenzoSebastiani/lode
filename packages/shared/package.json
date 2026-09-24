@@ -1,0 +1,16 @@
+{
+  "name": "@lode/shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.34.5",
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}
