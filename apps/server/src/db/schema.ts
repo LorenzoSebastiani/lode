@@ -24,3 +24,7 @@ export const studyUnits = pgTable('study_units', {
     position: integer('position').notNull(),
     completedAt: timestamp('completed_at')
 })
+
+export type User = typeof users.$inferInsert
+
+export type PublicUser = Omit<User, 'passwordHash'>

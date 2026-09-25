@@ -1,11 +1,12 @@
 import express from 'express'
 import authRouter from './modules/auth/auth.routes.js';
 import { errorHandler } from './middleware/errorHandler.js';
+import { requireAuth } from './middleware/requireAuth.js';
 
 const app = express();
 app.use(express.json());
 
-app.use('/auth/register', authRouter)
+app.use('/auth', authRouter)
 app.use(errorHandler)
 
 
