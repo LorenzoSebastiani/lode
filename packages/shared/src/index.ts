@@ -1,3 +1,1 @@
-import * as auth from './auth'
-
-export const authentication = auth
+export * from './auth.js'
