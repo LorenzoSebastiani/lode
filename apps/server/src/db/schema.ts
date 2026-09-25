@@ -25,6 +25,12 @@ export const studyUnits = pgTable('study_units', {
     completedAt: timestamp('completed_at')
 })
 
-export type User = typeof users.$inferInsert
+export type User = typeof users.$inferSelect
 
 export type PublicUser = Omit<User, 'passwordHash'>
+
+export type Exam = typeof exams.$inferSelect
+
+export type StudyUnit = typeof studyUnits.$inferSelect
+
+export type ExamWithUnits = Exam & {units: StudyUnit[]}
